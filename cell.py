@@ -8,7 +8,12 @@ def tanh(x):
 
 class Cell:
 
-    def __init__(self,short_array,input_array,long_array,params:np.ndarray=None):
+    def __init__(
+            self,
+            short_array:np.ndarray,
+            input_array:np.ndarray,
+            long_array:np.ndarray,
+            params:np.ndarray=None):
 
         if params is None:
             params = np.array([
@@ -56,3 +61,4 @@ long=np.array([2,2])
 cell=Cell(short_array=short,input_array=input,long_array=long,params=params)
 cell.forward()
 print(cell.context_vector)
+
