@@ -14,7 +14,6 @@ class Cell:
             input_array:np.ndarray,
             long_array:np.ndarray,
             params:np.ndarray=None
-            
             ):
 
         if params is None:
