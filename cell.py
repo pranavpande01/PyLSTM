@@ -8,10 +8,12 @@ def tanh(x):
 
 class Cell:
 
-    def __init__(self,short_array,input_array,long_array):
-        self.ws=np.array([2.7,2,1.41,4.38])
-        self.wi=np.array([1.62,1.65,0.94,-0.19])
-        self.b=np.array([1.62,.62,.32,.59])
+    def __init__(self,short_array,input_array,long_array,params:np.ndarray=np.array([np.random.randn(4,1),np.random.randn(4,1),np.random.randn(4,1)])):
+        
+        
+        self.ws=params[0]
+        self.wi=params[1]
+        self.b=params[2]
 
         self.long=long_array
         self.input=input_array
@@ -39,6 +41,12 @@ class Cell:
         self.context_vector
 
 
-cell=Cell(np.array([1,2]),np.array([1,2]),np.array([2,2]))
+
+
+params=[np.array([2.7,2,1.41,4.38]),np.array([1.62,1.65,0.94,-0.19]),np.array([1.62,.62,.32,.59])]
+short=np.array([1,2])
+input=np.array([1,2])
+long=np.array([2,2])
+cell=Cell(short_array=short,input_array=input,long_array=long,params=params)
 cell.forward()
 print(cell.context_vector)
