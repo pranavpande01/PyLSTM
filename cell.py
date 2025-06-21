@@ -13,7 +13,9 @@ class Cell:
             short_array:np.ndarray,
             input_array:np.ndarray,
             long_array:np.ndarray,
-            params:np.ndarray=None):
+            params:np.ndarray=None
+            
+            ):
 
         if params is None:
             params = np.array([
