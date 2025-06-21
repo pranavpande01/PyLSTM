@@ -60,14 +60,4 @@ class Cell:
 
 
 
-#params=[np.array([2.7,2,1.41,4.38]),np.array([1.62,1.65,0.94,-0.19]),np.array([1.62,.62,.32,.59])]
-#short=np.array([1,2])
-#input=np.array([1,2])
-#long=np.array([2,2])
-#cell=Cell(short_array=short,input_array=input,long_array=long)
-#cell.forward()
-#print(cell.context_vector)
-#cell.update(params_new=params)
-#print(cell.context_vector)
-
 
