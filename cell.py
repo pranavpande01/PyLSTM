@@ -23,11 +23,10 @@ class Cell:
         self.wi=params[1]
         self.b=params[2]
 
-        self.long=long_array
-        self.input=input_array
-        self.short=short_array
-        self.context_vector=np.nan
-
+        self.short = short_array.astype(float)
+        self.input = input_array.astype(float)
+        self.long = long_array.astype(float)
+        self.context_vector = np.nan
 
 
 
